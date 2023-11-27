@@ -1,0 +1,480 @@
+  @import url('https://fonts.googleapis.com/css2?family=Rubik');
+:root{
+  /**backgrouund-colors**/
+  --Light-Magenta: hsl(293, 100%, 63%);
+  --Light-Violet: hsl(264, 100%, 61%);
+  /**secondary colors**/
+  --White:hsl(0, 0%, 100%);
+  --Light-Grayish-Violet:hsl(270, 20%, 96%);
+  --Very-Dark-Desaturated-Violet:hsl(271, 36%, 24%);
+  --Very-Light-Magenta:hsl(289, 100%, 72%);
+}
+body{
+  background-color:var(--Light-Grayish-Violet);
+  margin:0;
+  padding:0;
+  height:100vh;
+  width:100vw;
+  font-family:'Rubik',verdana;
+}
+@media(max-width:768px){
+  .bg{
+  position:absolute;
+  background:linear-gradient(to bottom,var(--Light-Magenta), var(--Light-Violet)); 
+  top:0;
+  left:0;
+  height:70vh;
+  width:50vw;
+  border-radius:0 0 700px 0;
+}
+  .ctn{
+    position:relative;
+    margin:3.2rem;
+    background-color:var(--Light-Grayish-Violet);
+    border:10px solid var(--White);
+    border-radius:34px;
+    box-shadow:0 0 30px 8px #A5A5A5A6;
+  }
+  .ctn::after{
+    content:'';
+    background-color:var(--White);
+    position:absolute;
+    top:0;
+    left:24%;
+    width:8rem;
+    height:1.1rem;
+    border-radius:0 0 12px 12px;
+  }
+  .user{
+    background:linear-gradient(to right,var(--Light-Magenta), var(--Light-Violet));
+    border:none;
+    border-radius:25px 25px 6px 6px;
+    padding:1.8rem 0.6rem 0.6rem;
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:flex-start;
+    align-items:center;
+  }
+  .user img{
+    width:22px;
+    height:22px;
+    border:2px solid var(--White);
+    border-radius:50px;
+    align-self:left;
+  }
+   .user .pic{
+     display: flex;
+     flex-flow:row nowrap;
+     justify-content:center;
+     align-items: center;
+     margin-right:0.4rem;
+   }
+  .user .id{
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content:center;
+    align-items:left;
+    
+  }
+  .user svg{
+    transform:rotate(-90deg);
+    margin-right:4px;
+  }
+  .user .user-name{
+    color:var(--White);
+    font-size:12px;
+    font-weight:700;
+    text-align:left;
+  }
+  .user span{
+    font-weight:300;
+    color:var(--White);
+    font-size:8px;
+  }
+  .user .opt{
+    text-align:center;
+    font-size:18px;
+    font-weight:500;
+    align-self:flex-end;
+    position:relative;
+    left:4.8rem;
+    top:-0.46rem;
+  }
+  .chats{
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content:center;
+    align-items:center;
+    padding:4px 10px;
+  }
+  .chats .walker-msg{
+    margin-bottom:1px;
+    font-size:10px;
+    font-weight:400;
+    color:var(--Light-Violet);
+    background-color:hsla(289, 100%, 72%, 0.1);
+    padding:6.4px 7px;
+    border:none;
+    border-radius:10px 10px 10px 0;
+    width:8.2rem;
+    text-align:left;
+    align-self:flex-start;
+    line-height:12px;
+  }
+  .chats .images{
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:center;
+    align-self:flex-end;
+    margin-top:1rem;
+  }
+  .images img{
+    width:2.6rem;
+    height:auto;
+    align-self:right;
+    margin:0 0.3rem ;
+    border:none;
+    border-radius:5px;
+  }
+  .chats .user-msg {
+    margin-bottom: -1px;
+    font-size: 10px;
+    font-weight:400;
+    color: var(--Very-Dark-Desaturated-Violet);
+    background-color:var(--White);
+    padding: 6.4px 7px;
+    border: none;
+    border-radius: 10px 10px 0 10px;
+    width: 8.2rem;
+    text-align: left;
+    align-self: flex-end;
+    line-height: 12px;
+  }
+  #walker-msg{
+    margin-top:-16px;
+  }
+  .opt{
+    display:flex;
+    flex-direction:column;
+    align-items:left;
+    align-self:flex-start;
+    font-size:14px;
+    margin-top:8px;
+  }
+  .opt input{
+    width:14px;
+    margin-top:-1px;
+    margin-left:-2px;
+    
+  }
+  .opt1,.opt2{
+    background:linear-gradient(to right,var(--Light-Magenta), var(--Light-Violet));
+    color:var(--Light-Grayish-Violet);
+    margin-bottom:5px;
+    padding:10px 10px;
+    display:flex;
+    justify-content:space-between;
+    text-align:center;
+    align-items:center;
+    border:none;
+    border-radius:10px 10px 10px 0;
+  }
+  .opt1 div,.opt2 div{
+    display:flex;
+    justify-content:space-between;
+    text-align:center;
+    align-items:center;
+  }
+  .opt1 div span,.opt2 div span{
+    font-size:9px;
+    margin-left:3px;
+  }
+  .opt .price{
+    margin-left:3.4rem;
+    font-weight:700;
+    text-align:right;
+    
+  }
+  .input{
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:center;
+    align-items:center;
+  }
+  .input input{
+    color:#000000B0;
+    border:none;
+    border-radius:15px;
+    padding:0.65rem;
+    background-color:var(--White);
+    align-self:center;
+    margin:6px 0px;
+    position:relative;
+    width:10.2rem;
+    padding-right:45px;
+    outline:none;
+  }
+  .input input::placeholder{
+    color:#D3D3D3;
+  }
+  .input svg{
+    transform:rotate(90deg);
+    position:absolute;
+    right:12px;
+    background-color:var(--Very-Dark-Desaturated-Violet);
+    padding:0.7rem 0.6rem;
+    border:none;
+    border-radius:50px;
+  }
+  .about{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:1rem;
+    margin-top:-16px;
+  }
+  .about h1{
+    font-size:40px;
+  }
+  .about p{
+    color:#42445AB5;
+    text-align:center;
+    margin-top:-8px;
+    font-weight:400;
+  }
+}
+@media(min-width:769px){
+  .bg{
+  position:absolute;
+  background:linear-gradient(to bottom,var(--Light-Magenta), var(--Light-Violet)); 
+  top:0;
+  left:-5rem;
+  height:38vh;
+  width:40vw;
+  border-radius:0 0 190px 190px;
+}
+.hero{
+  display:flex;
+  flex-flow:row nowrap;
+  justify-content:center;
+  align-items:center;
+  margin-right:2rem;
+}
+  .ctn{
+    position:relative;
+    margin:6rem 2rem 0 15rem;
+    background-color:var(--Light-Grayish-Violet);
+    border:10px solid var(--White);
+    border-radius:34px;
+    box-shadow:0 0 30px 8px #A5A5A5A6;
+  }
+  .ctn::after{
+    content:'';
+    background-color:var(--White);
+    position:absolute;
+    top:0;
+    left:24%;
+    width:8rem;
+    height:1.1rem;
+    border-radius:0 0 12px 12px;
+  }
+  .user{
+    background:linear-gradient(to right,var(--Light-Magenta), var(--Light-Violet));
+    border:none;
+    border-radius:25px 25px 6px 6px;
+    padding:1.8rem 0.6rem 0.6rem;
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:flex-start;
+    align-items:center;
+  }
+  .user img{
+    width:22px;
+    height:22px;
+    border:2px solid var(--White);
+    border-radius:50px;
+    align-self:left;
+  }
+   .user .pic{
+     display: flex;
+     flex-flow:row nowrap;
+     justify-content:center;
+     align-items: center;
+     margin-right:0.4rem;
+   }
+  .user .id{
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content:center;
+    align-items:left;
+    
+  }
+  .user svg{
+    transform:rotate(-90deg);
+    margin-right:4px;
+  }
+  .user .user-name{
+    color:var(--White);
+    font-size:12px;
+    font-weight:700;
+    text-align:left;
+  }
+  .user span{
+    font-weight:300;
+    color:var(--White);
+    font-size:8px;
+  }
+  .user .opt{
+    text-align:center;
+    font-size:18px;
+    font-weight:500;
+    align-self:flex-end;
+    position:relative;
+    left:4.8rem;
+    top:-0.46rem;
+  }
+  .chats{
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content:center;
+    align-items:center;
+    padding:4px 10px;
+  }
+  .chats .walker-msg{
+    margin-bottom:1px;
+    font-size:10px;
+    font-weight:400;
+    color:var(--Light-Violet);
+    background-color:hsla(289, 100%, 72%, 0.1);
+    padding:6.4px 7px;
+    border:none;
+    border-radius:10px 10px 10px 0;
+    width:8.2rem;
+    text-align:left;
+    align-self:flex-start;
+    line-height:12px;
+  }
+  .chats .images{
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:center;
+    align-self:flex-end;
+    margin-top:1rem;
+  }
+  .images img{
+    width:2.6rem;
+    height:auto;
+    align-self:right;
+    margin:0 0.3rem ;
+    border:none;
+    border-radius:5px;
+  }
+  .chats .user-msg {
+    margin-bottom: -1px;
+    font-size: 10px;
+    font-weight:400;
+    color: var(--Very-Dark-Desaturated-Violet);
+    background-color:var(--White);
+    padding: 6.4px 7px;
+    border: none;
+    border-radius: 10px 10px 0 10px;
+    width: 8.2rem;
+    text-align: left;
+    align-self: flex-end;
+    line-height: 12px;
+  }
+  #walker-msg{
+    margin-top:-16px;
+  }
+  .opt{
+    display:flex;
+    flex-direction:column;
+    align-items:left;
+    align-self:flex-start;
+    font-size:14px;
+    margin-top:8px;
+  }
+  .opt input{
+    width:14px;
+    margin-top:-1px;
+    margin-left:-2px;
+    
+  }
+  .opt1,.opt2{
+    background:linear-gradient(to right,var(--Light-Magenta), var(--Light-Violet));
+    color:var(--Light-Grayish-Violet);
+    margin-bottom:5px;
+    padding:10px 10px;
+    display:flex;
+    justify-content:space-between;
+    text-align:center;
+    align-items:center;
+    border:none;
+    border-radius:10px 10px 10px 0;
+  }
+  .opt1 div,.opt2 div{
+    display:flex;
+    justify-content:space-between;
+    text-align:center;
+    align-items:center;
+  }
+  .opt1 div span,.opt2 div span{
+    font-size:9px;
+    margin-left:3px;
+  }
+  .opt .price{
+    margin-left:3.4rem;
+    font-weight:700;
+    text-align:right;
+    
+  }
+  .input{
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:center;
+    align-items:center;
+  }
+  .input input{
+    color:#000000B0;
+    border:none;
+    border-radius:15px;
+    padding:0.65rem;
+    background-color:var(--White);
+    align-self:center;
+    margin:6px 0px;
+    position:relative;
+    width:10.2rem;
+    padding-right:45px;
+    outline:none;
+  }
+  .input input::placeholder{
+    color:#D3D3D3;
+  }
+  .input svg{
+    transform:rotate(90deg);
+    position:absolute;
+    right:12px;
+    background-color:var(--Very-Dark-Desaturated-Violet);
+    padding:0.7rem 0.6rem;
+    border:none;
+    border-radius:50px;
+  }
+  .about{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:left;
+    padding:2rem;
+    margin-top:-16px;
+  }
+  .about h1{
+    font-size:40px;
+  }
+  .about p{
+    color:#42445AB5;
+    text-align:left;
+    margin-top:-8px;
+    font-weight:400;
+  }
+}
